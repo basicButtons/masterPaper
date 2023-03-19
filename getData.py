@@ -178,7 +178,7 @@ def main(start_year: int, end_year: int):
             saveIndex(index)
             print("code : ", code)
         else:
-            break
+            continue
     logout()
 
 

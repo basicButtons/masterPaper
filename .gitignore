@@ -1,3 +1,5 @@
 csv/
-data/
+# data/
 __pycache__
+normalCsv/
+algorithm/mlruns/
