@@ -5141,14 +5141,14 @@ def getLower(code: str):
 lowerStockCodeList = list(map(getLower, stockCode))
 
 def convertDfToCsvList(df):
-    columnsName = [column for column in df]
     csvData = []
-    # print("name : ", columnsName)
     for i in range(df.shape[0]):
-        oneLineData = getOneLineData(df, i, columnsName)
+        oneLineData = getOneLineList(df, i)
         csvData = csvData + oneLineData
     return csvData
 
+def getOneLineList(df,i):
+    return df.iloc[i].tolist()
 
 def getOneLineData(df, line, columns):
     oneLineData = []
@@ -5165,7 +5165,7 @@ def getOneLineData(df, line, columns):
 
 def saveCodeCsv(code, data):
     newCode = code.replace(".","")
-    file = "./csv/"+newCode+".csv"
+    file = "./csv/res.csv"
     with open(file, "w") as f:
         writer = csv.writer(f)
         writer.writerow(["date", "period", "value", "field", "symbol"])
