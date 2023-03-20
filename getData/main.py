@@ -124,7 +124,7 @@ def getReport(code, year, quarter):
     return reportData
 
 
-currentIndex = stockCode.index("SZ.000671")
+currentIndex = stockCode.index("SH.600528")
 
 
 def main(start_year: int, end_year: int):
